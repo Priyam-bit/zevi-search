@@ -1,0 +1,42 @@
+.SearchBar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    position: absolute;
+    top: 130px;
+    height: 20px;
+    width: 600px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #bcbcbc;
+}
+  
+.search:focus {
+    outline: none;
+}
+
+.searchButton {
+    position: absolute;
+    top: 155px;
+    right: 330px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: white;
+}
+
+.searchButton :hover {
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #f5f4f4;
+}
+
+.searchIcon {
+    height: 40px;
+    width: 40px;
+}
