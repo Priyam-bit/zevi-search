@@ -9,6 +9,15 @@ interface ProductViewProps {
 
 export const ProductView: React.FC<ProductViewProps> = ({p}) => {
         const [WishListed, setWishListed] = useState<boolean>(false);
+        const [viewProduct, setViewProduct] = useState<boolean>(false);
+
+        const handleMouseEnter = () => {
+            setViewProduct(true);
+        }
+
+        const handleMouseLeave = () => {
+            setViewProduct(false);
+        }
 
         const handleClick = (e : React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
             setWishListed(!WishListed);
@@ -16,7 +25,12 @@ export const ProductView: React.FC<ProductViewProps> = ({p}) => {
         return (
             <div key = {p._id} className="Product">
                 <div className="ProductImgWrapper">
-                    <img className='ProductImg' src={p.imageUrl} alt="" />
+                    <img 
+                        className='ProductImg' 
+                        src={p.imageUrl} 
+                        alt="Product" 
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}/>
                     <span className='Wishlist'
                     onClick={(e) => handleClick(e)}>
                         {WishListed === true ? 
@@ -25,6 +39,9 @@ export const ProductView: React.FC<ProductViewProps> = ({p}) => {
                         <img src="./heart.png" alt="wishlist" className='WishlistIcon' />
                         }
                     </span>
+                    {viewProduct && <span className='ViewProduct'>
+                        <span className='ViewText'>View Product</span>
+                    </span>}
                 </div>
                 <div className="ProductName">{p.name}</div>
                 <div className="ProductPrice">
