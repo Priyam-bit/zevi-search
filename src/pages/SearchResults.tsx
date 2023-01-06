@@ -4,6 +4,7 @@ import { SearchBar } from '../components/SearchBar';
 import { GetRatingsUI } from '../components/GetRatingsUI';
 import { Brand, Product, Rating } from '../Models/Product';
 import { GetProducts } from '../DataGenerator/GetProducts';
+import { ProductView } from '../components/ProductView';
 
 interface SearchResultsProps {
 
@@ -31,7 +32,6 @@ export const SearchResults: React.FC<SearchResultsProps> = ({}) => {
         const handleRatingChange = (e : React.ChangeEvent<HTMLInputElement>) => {
             setRating(e.target.value);
         }
-
 
         return (
             <div className="SearchResults">
@@ -135,22 +135,7 @@ export const SearchResults: React.FC<SearchResultsProps> = ({}) => {
                     <div className="Products">
                         {
                             products?.map((p) => (
-                                <div key = {p._id} className="Product">
-                                    <div className="ProductImgWrapper">
-                                        <img className='ProductImg' src={p.imageUrl} alt="" />
-                                    </div>
-                                    <div className="ProductName">{p.name}</div>
-                                    <div className="ProductPrice">
-                                        <span className='OriginalPrice'>Rs. {p.originalPrice}</span>
-                                        <span className='DiscountedPrice'> Rs.{p.discountedPrice}</span>
-                                    </div>
-                                    <div className="ProductRating">
-                                        <span className='RatingImg'>
-                                            <GetRatingsUI Rating={p.rating}/>                                    
-                                        </span>
-                                        <span className='Reviews'>({p.reviews})</span>
-                                    </div>
-                                </div>
+                                <ProductView p = {p} />
                             ))
                         }
                     </div>
