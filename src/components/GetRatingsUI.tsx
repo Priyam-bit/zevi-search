@@ -24,7 +24,7 @@ export const GetRatingsUI: React.FC<GetRatingsUIProps> = ({Rating}) => {
                 <span className="fa fa-star checked"></span>
                 <span className="fa fa-star checked"></span>
                 <span className="fa fa-star checked"></span>
-                <span className="fa fa-star checked"></span>
+                <span className="fa fa-star unchecked"></span>
             </span>
         )
     }
