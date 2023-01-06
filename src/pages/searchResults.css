@@ -68,8 +68,18 @@
     padding: 0 0 5px 0;
 }
 
-.FilterCheckBox {
-    border: black;
+.FilterCheckbox {
+    box-sizing: border-box;
+    appearance: none;
+    background: white;
+    outline: 1px solid #333;
+    border: 2px solid white;
+    width: 14px;
+    height: 14px;
+}
+
+.FilterCheckbox:checked {
+    background: #333;
 }
 
 label {
