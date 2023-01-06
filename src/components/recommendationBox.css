@@ -1,0 +1,63 @@
+.RecommendationBoxWrapper {
+    position: absolute;
+    top : 175px;
+    height: 360px;
+    width: 522px;
+    padding : 25px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 30px #898888;
+}
+
+.RecommendationBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.Header {
+    align-self: flex-start;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.Trends {
+    align-self: flex-start;
+    padding: 0px 0 20px 0;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.Trend {
+    display: flex;
+    max-width: 90px;
+    flex-direction: column;
+    padding-right: 18px;
+}
+
+.TrendImg {
+    align-self: flex-start;
+    width: 90px;
+    height: 121.5px;
+    border-radius: 3px;
+    /* object-fit: contain; */
+}
+
+.TrendName {
+    align-self: flex-start;
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+.Suggestions {
+    display: flex;
+    flex-direction: column;
+}
+
+.Suggestion {
+    align-self: flex-start;
+    font-size: 10px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}

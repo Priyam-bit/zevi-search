@@ -4,6 +4,11 @@
     overflow: hidden;
 } 
 
+.HomeElements {
+    display: flex;
+    justify-content: center;
+}
+
 .BgImage {
     max-width: 100%;
     height: auto;
