@@ -13,7 +13,12 @@ export const Home: React.FC<HomeProps> = () => {
         return (
             <div className="HomePage">
                 <div className="HomeElements">
-                    <SearchBar setShowRecommendation={setshowRecommendation} />
+                    <div className="SearchBar">
+                        <SearchBar 
+                            setShowRecommendation={setshowRecommendation} 
+                            isHomePage = {true}
+                        />
+                    </div>
                     {showRecommendation && <RecommendationBox />}
                 </div>
                 <img className='BgImage' src= "./ZeviBackground.jpg" alt='Background'/>

@@ -2,10 +2,11 @@ import './searchBar.css'
 import React from 'react'
 
 interface SearchBarProps {
-    setShowRecommendation? : React.Dispatch<React.SetStateAction<boolean>>
+    setShowRecommendation? : React.Dispatch<React.SetStateAction<boolean>>,
+    isHomePage? : boolean
 }
 
-export const SearchBar: React.FC<SearchBarProps> = ({setShowRecommendation}) => {
+export const SearchBar: React.FC<SearchBarProps> = ({setShowRecommendation, isHomePage}) => {
     const handleFocus = () => {
         if (setShowRecommendation !== undefined) {
             setShowRecommendation(true);
@@ -21,12 +22,12 @@ export const SearchBar: React.FC<SearchBarProps> = ({setShowRecommendation}) => 
                 <input 
                     onFocus={handleFocus}
                     onBlur = {handleBlur}
-                    className='search'
+                    className={isHomePage !== undefined ? 'searchHome' : 'search'} 
                     placeholder='Search'
                     onChange={() => {}}/>
-                    <button className='searchButton'>
+                    {isHomePage  !== undefined && <button className='searchButton'>
                         <img className='searchIcon' src='./searchIcon.png' alt='Search'/>
-                    </button>
+                    </button>}
             </div>
         );
 }

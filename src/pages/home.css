@@ -1,8 +1,14 @@
  .HomePage {
+    position: relative;
     max-width: 100%;
     height: 100vh;
     overflow: hidden;
 } 
+
+.SearchBar {
+    position: absolute;
+    top: 55px;
+}
 
 .HomeElements {
     display: flex;
