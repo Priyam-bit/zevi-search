@@ -1,4 +1,4 @@
-import { Brand, Product, Rating } from "../Models/Product";
+import { Product } from "../Models/Product";
 import { CreateNewProduct } from "./CreateNewProduct";
 
 export function 

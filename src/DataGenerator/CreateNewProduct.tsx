@@ -1,5 +1,5 @@
 import { faker } from '@faker-js/faker';
-import { Brand, Product, Rating } from '../Models/Product';
+import { Product } from '../Models/Product';
 
 export function 
     CreateNewProduct(brand : string, minPrice : number, maxPrice : number, rating : number): Product {

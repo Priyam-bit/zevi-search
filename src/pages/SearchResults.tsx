@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './searchResults.css'
 import { SearchBar } from '../components/SearchBar';
 import { GetRatingsUI } from '../components/GetRatingsUI';
-import { Brand, Product, Rating } from '../Models/Product';
+import { Product } from '../Models/Product';
 import { GetProducts } from '../DataGenerator/GetProducts';
 import { ProductView } from '../components/ProductView';
 
@@ -10,7 +10,7 @@ interface SearchResultsProps {
 
 }
 
-export const SearchResults: React.FC<SearchResultsProps> = ({}) => {
+export const SearchResults: React.FC<SearchResultsProps> = () => {
         const [products, setProducts] = useState<Product[]>();
         const [brand, setBrand] = useState<string>('All');
         const [maxPrice, setMaxPrice] = useState<string>('1000');

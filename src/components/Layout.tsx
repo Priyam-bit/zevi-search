@@ -5,7 +5,7 @@ interface LayoutProps {
 
 }
 
-export const Layout: React.FC<LayoutProps> = ({}) => {
+export const Layout: React.FC<LayoutProps> = () => {
         return (
             <div className="App">
                 <Outlet />

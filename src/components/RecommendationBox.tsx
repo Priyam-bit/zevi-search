@@ -6,7 +6,7 @@ interface RecommendationBoxProps {
 
 }
 
-export const RecommendationBox: React.FC<RecommendationBoxProps> = ({}) => {
+export const RecommendationBox: React.FC<RecommendationBoxProps> = () => {
     return (
         <div className="RecommendationBoxWrapper">
             <div className="RecommendationBox">
