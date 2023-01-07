@@ -17,17 +17,20 @@ export const SearchBar: React.FC<SearchBarProps> = ({setShowRecommendation, isHo
             setShowRecommendation(false);
         } 
     }
+    const handleSubmit = () => {
+        document.location = 'search';
+    }
         return (
             <div className="SearchBar">
                 <input 
                     onFocus={handleFocus}
                     onBlur = {handleBlur}
                     className={isHomePage !== undefined ? 'searchHome' : 'search'} 
-                    placeholder='Search'
-                    onChange={() => {}}/>
-                    {isHomePage  !== undefined && <button className='searchButton'>
-                        <img className='searchIcon' src='./searchIcon.png' alt='Search'/>
-                    </button>}
+                    placeholder='Search'/>
+                    <button type = 'submit' onClick = {handleSubmit} className='searchButton'>
+                        <img 
+                        className={isHomePage !== undefined ? 'searchIconHome' : 'searchIcon'}  src='./searchIcon.png' alt='Search'/>
+                    </button>
             </div>
         );
 }

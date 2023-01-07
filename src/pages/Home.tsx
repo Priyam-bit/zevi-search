@@ -19,7 +19,9 @@ export const Home: React.FC<HomeProps> = () => {
                             isHomePage = {true}
                         />
                     </div>
-                    {showRecommendation && <RecommendationBox />}
+                    {showRecommendation && <div className="RecommendationBoxHome">
+                        <RecommendationBox />
+                    </div>}
                 </div>
                 <img className='BgImage' src= "./ZeviBackground.jpg" alt='Background'/>
             </div>

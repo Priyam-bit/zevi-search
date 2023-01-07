@@ -88,3 +88,24 @@
 .DiscountedPrice {
     color: #768cff;
 }
+
+@media screen and (max-width: 500px){
+    .Product {
+        width: 50%;
+        align-items: center;
+    }
+
+    .ProductImg {
+        width: 130px;
+        height: 180.55px;
+    }
+
+    .ViewProduct {
+        width: 130px;
+        height: 30px;
+    }
+
+    .ViewText {
+        font-size: 15px;
+    }
+}

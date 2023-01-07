@@ -1,23 +1,26 @@
 .RecommendationBoxWrapper {
-    position: absolute;
-    top : 175px;
-    height: 360px;
-    width: 522px;
-    padding : 25px;
+    position: relative;
+    max-width: 522px;
+    max-height: 600px;
     background-color: white;
+    padding : 25px;
     border-radius: 5px;
     box-shadow: 0 0 30px #898888;
+    display: flex;
+    flex-direction: column;
 }
 
 .RecommendationBox {
-    position: relative;
+    align-self: flex-start;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .Header {
     align-self: flex-start;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     padding-bottom: 15px;
 }
@@ -60,4 +63,52 @@
     font-size: 10px;
     margin-bottom: 6px;
     font-weight: 500;
+}
+
+@media screen and (max-width: 500px){
+    .RecommendationBoxWrapper {
+        width: 300px;
+        height: auto;
+        padding: 10px;
+    }
+    
+        .Header {
+            margin-left: 20px;
+            font-size: 13px;
+            padding-bottom: 5px;
+        }
+    
+    .Trends {
+        flex-wrap: wrap;
+        align-self: center;
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    .Trend {
+        width: 25%;
+        /* padding-right: 20px; */
+    }
+
+    .Trend:nth-child(3) {
+        display: none;
+    }
+
+    .Trend:nth-child(4) {
+        display: none;
+    }
+
+    .TrendImg {
+        width: 70px;
+        height: 94.6px;
+    }
+
+    .TrendName {
+        padding: 5px 0;
+    }
+
+    .Suggestions {
+        margin-left: 20px;
+        padding-top: 5px;
+    }
 }

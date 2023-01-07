@@ -1,6 +1,7 @@
 .SearchBar {
+    max-width: 450px;
+    max-height: 18px;
     position: relative;
-    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -15,6 +16,10 @@
     color: #bcbcbc;
 }
 
+.searchHome:focus {
+    outline: none;
+}
+
 .search {
     width: 350px;
     height: 10px;
@@ -25,17 +30,14 @@
     font-size: 14px;
     color: #bcbcbc;
 }
-  
-.searchHome:focus {
-    outline: none;
-}
 
 .searchButton {
+    align-self: flex-end;
     position: absolute;
-    top: 25px;
-    right: 408px;
-    transform: translateY(-50%);
+    top: 3px;
+    right: 10px;
     border: none;
+    outline: none;
     background-color: white;
 }
 
@@ -46,6 +48,17 @@
 }
 
 .searchIcon {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
 }
+
+.searchIconHome {
+    height: 37px;
+    width: 37px;
+}
+
+@media screen and (max-width: 500px){
+    .SearchBar {
+        max-width: 300px;
+    }
+  }

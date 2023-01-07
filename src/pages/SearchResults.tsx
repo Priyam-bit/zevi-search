@@ -38,7 +38,9 @@ export const SearchResults: React.FC<SearchResultsProps> = ({}) => {
                 <div className="SearchBar">
                     <SearchBar />
                 </div>
-                <div className="Header">
+                <br />
+                <br />
+                <div className="SearchResultsHeader">
                     Search Results
                 </div>
                 <div className="Container">
