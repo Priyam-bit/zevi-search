@@ -9,7 +9,7 @@ export function
         name : faker.commerce.productName(),
         brand : brand,
         originalPrice : originalPrice,
-        discountedPrice : Math.max(300, parseFloat(originalPrice) - Math.floor((Math.random() * 100) + 1)),
+        discountedPrice : Math.min(parseFloat(originalPrice), Math.max(300, parseFloat(originalPrice) - Math.floor((Math.random() * 100) + 1))),
         rating : rating,
         reviews : Math.floor((Math.random() * 100) + 1),
         imageUrl : faker.image.fashion(180,250,true)
